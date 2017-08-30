@@ -85,7 +85,7 @@
 						<url>http://localhost:8080/manager/text</url> <!-- tomcat endpoint -->
 						<update>true</update>
 						<server>jenkins-bot</server> <!-- /conf/settings.xml -->
-						<path>/ers_project</path> <!-- (context root) -->
+						<path>/ers</path> <!-- (context root) -->
 					</configuration>
 				</plugin>
 				<plugin>
