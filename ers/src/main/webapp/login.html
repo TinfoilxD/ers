@@ -1,0 +1,20 @@
+<div id="loginContainer" class="container">
+
+	<div ng-show="loginFail" class="alert alert-warning">
+		<strong>Warning!</strong> Your login credentials didn't work.
+	</div>
+	<form ng-submit="login()" )>
+		<div id="loginPanel" class="panel panel-info col-lg-4">
+			<div class="panel-heading">
+				<label>Login</label>
+			</div>
+			<div class="panel-body">
+				<label>Username:</label><input type="text" id="username" ng-model="credentials.username"> <br>
+				<label>Password:</label> <input type="password" id="password" ng-model="credentials.password"> <br>
+				<input class="btn btn-primary" type="submit" value="Login">
+			</div>
+		</div>
+	</form>
+
+
+</div>

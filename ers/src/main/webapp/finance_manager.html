@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Finance Manager Home</title>
+</head>
+<body>
+<div id="finance_manager_header">
+<h1>Finance Manager Home</h1>
+<a id="logout-button" href="" ng-click="logout()">Logout</a>
+</div>
+<select ng-model="status" ng-options="status.status for status in statusList" ng-change="changeTableFilter()">
+	<!-- <option value="" selected="selected">Filter</option> -->
+</select>
+	<table class="table table-striped" id="requestTable">
+		<tr><th>id</th><th>Amount</th><th>Desc</th><th>Status</th><th>Author</th><th>Submitted</th><th>Resolver</th><th>Resolved</th><th>Approve</th><th>Deny</th></tr>
+		<tr ng-repeat="reim in displayedReims | filter: filterTable" >
+			<td>{{reim.id}}</td>
+			<td>{{reim.amount}}</td>
+			<td>{{reim.description}}</td>
+			<td>{{reim.status.status}}</td>
+			<td>{{reim.author.firstName}}</td>
+			<td>{{reim.submitted.month + '-' + reim.submitted.dayOfMonth + '-' + reim.submitted.year}}</td>
+			<td>{{reim.resolver.firstName}}</td>
+			<td>{{reim.resolved.month + '-' + reim.resolved.dayOfMonth + '-' + reim.resolved.year}}</td>
+
+			
+			<!-- <td><button  ng-if="reim.status.status === 'Pending'" ui-sref="financeManagerAction({approve: 'true', processedReim: reim, statusList: statusList})">&#10003</button></td>
+			<td><button  ng-if="reim.status.status === 'Pending'" ui-sref="financeManagerAction({approve: 'false', processedReim: reim, statusList: statusList})">X</button></td> -->
+			<td><button class="approveButton" ng-if="reim.status.status === 'Pending'" ng-click="openConfirmAction(true, reim, statusList)">&#10003</button></td>
+			<td><button class="denyButton" ng-if="reim.status.status === 'Pending'" ng-click="openConfirmAction(false, reim, statusList)">X</button></td>
+		
+		</tr>
+	</table>
+</body>
+</html>

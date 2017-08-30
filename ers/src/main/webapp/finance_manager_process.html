@@ -1,0 +1,12 @@
+<div class="modal-body">
+<div ng-if="approved" id="approve body">
+	<p>Are you sure you want to approve this request?</p>
+	<button type="button" class="btn btn-default" ng-click="processRequest(true)">Approve</button>
+	<button type="button" class="btn btn-default" ng-click="cancelModal()">Cancel</button>
+</div>
+<div ng-if="!approved" id="denied body">
+	<p>Are you sure you want to deny this request?</p>
+	<button type="button" class="btn btn-default" ng-click="processRequest(false)">Deny</button>
+	<button type="button" class="btn btn-default" ng-click="cancelModal()">Cancel</button>
+</div>
+</div>

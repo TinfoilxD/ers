@@ -1,0 +1,21 @@
+<div class="container" id="employee_home">
+<div id="employee_header">
+	<h1>Employee Home</h1>
+	<a id="logout-button" href="" ng-click="logout()">Logout</a>
+</div>
+	<table class="table table-striped" id="requestTable">
+		<tr><th>id</th><th>Amount</th><th>Desc</th><th>Status</th><th>Author</th><th>Submitted</th><th>Resolver</th><th>Resolved</th></tr>
+		<tr ng-repeat="reim in reims">
+			<td>{{reim.id}}</td>
+			<td>{{reim.amount}}</td>
+			<td>{{reim.description}}</td>
+			<td>{{reim.status.status}}</td>
+			<td>{{reim.author.firstName}}</td>
+			<td>{{reim.submitted.month + '-' + reim.submitted.dayOfMonth + '-' + reim.submitted.year}}</td>
+			<td>{{reim.resolver.firstName}}</td>
+			<td>{{reim.resolved.month + '-' + reim.resolved.dayOfMonth + '-' + reim.resolved.year}}</td>
+			
+		</tr>
+	</table>
+	<button class="btn btn-success" ng-click="openCreateTicket()">Make New Request</button>
+</div>

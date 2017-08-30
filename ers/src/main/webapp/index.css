@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+#create_ticket_form{
+	margin-left: 10%;
+	margin-top: 10%;
+}
+
+#create_modal_body{
+	border-color: #bce8f1;
+	border-radius: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+
+#create_modal_title{
+	text-align: center;
+	border-color: #bce8f1;
+	border-radius: 5px;
+	background-image: linear-gradient(to bottom,#d9edf7 0,#c4e3f3 100%);
+	padding-top: 5%;
+	padding-bottom: 3%;
+}
+#create_modal_title_text{
+	margin-top: 0
+}
+#loginContainer{
+	margin: 0px auto;
+}
+
+#logout-button{
+	float: right;
+}
+
+#loginPanel{
+	margin-left: 30%;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.padding-heading {
+	padding: 0px;
+}
+
+.approveButton{
+	color: green;
+}
+
+.denyButton{
+	color: red;
+}

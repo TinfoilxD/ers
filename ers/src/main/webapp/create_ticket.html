@@ -1,0 +1,21 @@
+<div class="modal-body" id="create_modal_body">
+	<form ng-submit="createTicket()">
+	<div id="create_modal_title">
+			<h4 id="create_modal_title_text">Open Reimbursement Ticket</h3>
+		</div>
+	<div class="form-group" id="create_ticket_form">
+		<div class="form-group row">
+		Amount: <input ng-model="reim.amount" type="text">
+		</div>
+		<div class="form-group row">
+		Description: <input ng-model="reim.description" type="textbox">
+		</div>
+		<select class="dropdown" ng-model="reim.type" ng-options="type.type for type in reimTypes">
+			<option value="">Select Type</option>
+		</select>
+		<br>
+		<br>
+		<input type="submit" value="Create Ticket">
+	</div>
+	</form>
+</div>
